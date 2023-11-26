@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --Tomato : hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    background: var(--Dark-Slate-Grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    width: 700px;
+    background: var(--White);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.left-side{
+    max-width: 50%;
+    padding: 40px 30px 40px 40px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side{
+    width: 50%;
+}
+
+.right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.title{
+    font-size: 2.5em; 
+    margin: 0;
+    margin-top: 10px;
+}
+
+p, li {
+    font-size: 0.82em;   
+}
+
+ul{
+    list-style: none;
+    line-height: 30px;
+    padding-left: 5px;
+}
+
+
+li::before{
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../assets/images/icon-list.svg");
+    background-size: cover;
+    right: 8px;
+    top: 3px;
+}
+
+input{
+   margin-top: 10px; 
+   margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid var(--Grey);
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+}
+
+input:focus{
+    border: 1px solid var(--Tomato);
+}
+
+input::placeholder{
+    color: var(--Grey);
+}
+
+.submit-button{
+    background: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    font-size: 0.75em;
+    padding: 15px 30px 15px 30px; 
+}
+
+.submit-button:hover{
+    background: var(--Tomato);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px var(--Tomato);
+}
+
+.email-label{
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.success-message{ 
+    display: none;
+   background: var(--White);
+   width: 350px;
+   height: 40%;
+   padding: 50px;
+   border-radius: 30px;
+}
+
+.registered-email{
+    font-size: 1.15em;
+    font-weight: 700;
+    color: black;
+}
+
+.success-message img{ 
+    margin-bottom: 20px;
+}
+
+.subscribe{
+    font-size: 3em;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+.dismiss-btn{
+    background: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    font-size: 0.75em;
+    padding: 15px 30px 15px 30px; 
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dismiss-btn:hover{
+    background: var(--Tomato);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px var(--Tomato);
+}
+
+.error-message{
+    display: none;
+    position: absolute;
+    color: var(--Tomato);
+    font-size: 0.75em;
+    margin-top: 15px;
+    font-weight: 700;
+    margin-left: 180px;
+}
+
+
+
+@media screen and (max-width: 568px){
+    .container{
+        flex-direction: column-reverse;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        padding: 2px;
+    }
+
+    .left-side{
+        max-width: 100%;
+        padding: 40px 30px 40px 30px;
+    }
+
+    .right-side{
+        width: 100%;
+        margin: 0;
+        max-height:450px;
+    }
+
+    .right-side img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0px 0px 20px 20px;
+        
+    }
+
+    .submit-button:hover{
+        background: var(--Tomato);
+        cursor: pointer;
+        box-shadow: 0px 0px 10px 0px var(--Tomato);
+    }
+
+
+    .success-message{ 
+        background: var(--White);
+        width: 100%;
+        height: 100vh;
+        padding: 50px;
+        border-radius: 0px;
+    }
+
+    .success-message img{ 
+        margin-top: 100px; 
+    }
+
+    .success-message p{
+        font-size: 1em;
+    }
+
+    .success-message h1{
+        line-height: 1em;
+        margin-bottom: 30px;
+    }
+
+    .success-button{
+        margin-top: 250px; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1em;
+    } 
+
+    .error-message{
+        margin-left: 250px;
+    }
+
+}
